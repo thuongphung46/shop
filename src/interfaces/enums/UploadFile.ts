@@ -1,0 +1,7 @@
+export enum SQL_FILE_TYPE {
+  ALTER_TABLES = 1,
+  TABLES = 2,
+  FUNCTION = 3,
+  PROCEDURES = 4,
+  ADDON = 5,
+}
