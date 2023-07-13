@@ -1,6 +1,6 @@
-import { Colors } from "@common/color";
+import { Colors } from "common/color";
 import { AiOutlineClose } from "react-icons/ai";
-import CustomButton from "@component/atoms/CustomButton";
+import CustomButton from "component/atoms/CustomButton";
 import { useNavigate } from "react-router-dom";
 
 const CancelButton = () => {
@@ -15,8 +15,7 @@ const CancelButton = () => {
       }}
       onClick={() => navigate(-1)}
       startIcon={<AiOutlineClose />}
-      variant="contained"
-    >
+      variant="contained">
       Cancel
     </CustomButton>
   );

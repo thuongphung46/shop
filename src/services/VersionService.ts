@@ -1,6 +1,6 @@
-import { HistoryDetailPayload } from "@redux/payload_types/UpgradeHistory";
-import { PxPagination } from "@interfaces/layout/Pagination";
-import { VersionInfo } from "@interfaces/VersionInfo";
+import { HistoryDetailPayload } from "redux/payload_types/UpgradeHistory";
+import { PxPagination } from "interfaces/layout/Pagination";
+import { VersionInfo } from "interfaces/VersionInfo";
 import { HttpClientRequest } from "./Request";
 const Controller = "Version";
 

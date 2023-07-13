@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./rootSaga";
-import logger from "redux-logger";
+// import logger from "redux-logger";
 import { versionSlice } from "./slices/versionSlice";
 import { uploadSlice } from "./slices/uploadSlice";
 import { upgradeHistorySlice } from "./slices/upgradeHistorySlice";
@@ -19,7 +19,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => {
     const middlewares = getDefaultMiddleware().concat(sagaMiddleware);
     if (process.env.NODE_ENV === "development") {
-      middlewares.push(logger);
+      // middlewares.push(logger);
     }
 
     return middlewares;

@@ -1,11 +1,11 @@
-import { Colors } from "@common/color";
+import { Colors } from "common/color";
 import { MdMenu, MdUpgrade } from "react-icons/md";
 import { FaServer } from "react-icons/fa";
 import { BiGitBranch } from "react-icons/bi";
 import { Menu, MenuItem, Sidebar, useProSidebar } from "react-pro-sidebar";
 import { Link, useLocation } from "react-router-dom";
 import ManageHistoryIcon from "@mui/icons-material/ManageHistory";
-import { PxUpgradeMenu } from "@interfaces/layout/PxUpgradeMenu";
+import { PxUpgradeMenu } from "interfaces/layout/PxUpgradeMenu";
 
 export const SideMenu = () => {
   const menuData: PxUpgradeMenu[] = [
@@ -40,8 +40,7 @@ export const SideMenu = () => {
   return (
     <Sidebar
       style={{ overflowY: "auto", height: "100%" }}
-      backgroundColor={Colors.primary}
-    >
+      backgroundColor={Colors.primary}>
       <Menu
         menuItemStyles={{
           button: ({ active }) => {
@@ -54,18 +53,15 @@ export const SideMenu = () => {
           },
           icon: { color: Colors.white, fontSize: 20 },
           label: { fontSize: 17, color: Colors.white, fontWeight: "bold" },
-        }}
-      >
+        }}>
         <MenuItem
           icon={<MdMenu></MdMenu>}
           component={
             <div
               onClick={() => {
                 collapseSidebar();
-              }}
-            ></div>
-          }
-        >
+              }}></div>
+          }>
           Pyxis Upgrade
         </MenuItem>
         {menuData.map((menuItem) => {
@@ -74,8 +70,7 @@ export const SideMenu = () => {
               active={location.pathname.includes(menuItem.route_path)}
               icon={menuItem.display_icon}
               component={<Link to={menuItem.route_path} />}
-              key={menuItem.key}
-            >
+              key={menuItem.key}>
               {`${menuItem.display_name}`}
             </MenuItem>
           );

@@ -1,7 +1,7 @@
 import axios, { HttpStatusCode } from "axios";
 
-import GlobalConstant, { API_URL } from "@constants/GlobalConstant";
-import { ApiResponse } from "@interfaces/ApiResponse";
+import GlobalConstant, { API_URL } from "constants/GlobalConstant";
+import { ApiResponse } from "interfaces/ApiResponse";
 
 export const upgradeApiInstance = axios.create({
   baseURL: API_URL.UPGRADE_DB,
@@ -14,14 +14,14 @@ export const upgradeApiInstance = axios.create({
   },
 });
 
-export const uploadCloudInstance = axios.create({
-  baseURL: API_URL.UPLOAD,
-  timeout: GlobalConstant.REQUEST_TIMEOUT,
-  headers: {
-    Accept: "application/json, text/plain, */*",
-    Authorization: "",
-  },
-});
+// export const uploadCloudInstance = axios.create({
+//   baseURL: API_URL.UPLOAD,
+//   timeout: GlobalConstant.REQUEST_TIMEOUT,
+//   headers: {
+//     Accept: "application/json, text/plain, */*",
+//     Authorization: "",
+//   },
+// });
 
 const composeUri = (controller: string, action: string, obj: any) => {
   const arr = [];

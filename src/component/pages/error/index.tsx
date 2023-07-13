@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import { ErrorResponse } from "@interfaces/ErrorResponse";
+import { ErrorResponse } from "interfaces/ErrorResponse";
 import "./index.styles.css";
 
 const errorCheck = (error: any): error is ErrorResponse => {

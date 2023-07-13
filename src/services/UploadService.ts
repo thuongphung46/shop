@@ -1,6 +1,6 @@
 import { upgradeApiInstance, HttpClientRequest } from "./Request";
-import { SQL_FILE_TYPE } from "@interfaces/enums/UploadFile";
-import { UploadInfo } from "@interfaces/UploadInfo";
+import { SQL_FILE_TYPE } from "interfaces/enums/UploadFile";
+import { UploadInfo } from "interfaces/UploadInfo";
 
 const controller = "File";
 export const UploadService = {
